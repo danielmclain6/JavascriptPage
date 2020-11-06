@@ -1,0 +1,23 @@
+
+
+/* This is really the only reason I need this style sheet, it's just easier to test changing the values */
+body {
+    background-color: bisque;
+    font-size: 80%;
+}
+
+/* This makes the caption for the picture on the about page look better */
+
+.caption {
+    font-size: smaller;
+}
+
+/* I thought about using classes to specify which tags to style, but I have so few different
+    elements that I didn't really need to. However, I do recognize the importance of doing so on a real website that has many of the same element */
+table, th, td, tr {
+    border: 1px solid black;
+}
+
+#projectName {
+    font-size: 18px;
+}

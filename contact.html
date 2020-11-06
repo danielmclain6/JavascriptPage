@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href='styling.css' type="text/css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navigation</a>
+        <div class="navbar-nav" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="Landing.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About.html">About me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/daniel-mclain-341a152b/">My LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class = 'container'>
+    <form action = 'time.jpg'>
+        <fieldset>
+            <legend>
+                Contact Me
+            </legend>
+            
+            <label for='name'>Name</label>
+            <input type="text" name='name' id='name' placeholder='Your Name' required> <br> <br>
+            <label for="email">Email Address</label>
+            <input type ="email" name='email' id='email' placeholder="Your Email Address" required><br> <br>
+            <label for='dogchoice' name="dogchoice" id="dogchoice">For a quicker response, please choose your favorite </label>
+            <select type="dogchoice" name="dogchoice" id="dogchoice">
+                <option value="bigdog">Big Dogs</option>
+                <option value='smalldog'>Small Dogs</option>
+                <option value='cat'>I prefer cats</option>
+                <!-- Who wants to talk with someone that doesn't like animals? -->
+                <option value="donotreply">I don't like animals</option>
+
+            </select>
+            <p>Disclaimer: This is not a promise that I will contact you</p>
+        </fieldset>
+
+        <input type="submit" value="Enter Data" onclick = "submitContact(event)">
+        <input type="reset" value="Clear Data">
+    </form>
+    <p>You entered: </p>
+    <p id = 'nameInput'></p>
+    <p id = 'emailInput'></p>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class = "row">
+    <div class='col-sm offset-5'>
+      <footer>
+          <a href="privacy.html">Privacy Policy</a>
+          <br>
+          <a href="About.html" id = "links" >About me</a> <br>
+  
+          <a href="https://www.linkedin.com/in/daniel-mclain-341a152b/" id = "links">My LinkedIn</a><br>
+          <a href="donate.html">Donate to me</a>
+      </footer>
+     </div>
+    </div>
+    <script>
+
+        function submitContact(event) {
+            event.preventDefault();
+            
+            const nameField = document.getElementById("name").value;
+            const emailField= document.getElementById("email").value;
+            document.getElementById("nameInput").innerText = 'Name: ' + nameField;
+            document.getElementById("emailInput").innerText = 'Email: ' + emailField;
+            const animalChoice = document.getElementById("dogchoice");
+            console.log(animalChoice.value);
+            
+
+        }
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>
